@@ -12,7 +12,7 @@ getUsers.get('/:id', (req, res) => {
       if (!user) {
         res.status(404).json({ message: 'Нет пользователя с таким id' });
       }
-      res.status(200).send(user);
+      res.status(200).json(user);
     })
     .catch(() => {
       res.status(500).json({ message: 'Запрашиваемый файл не найден' });
